@@ -5,7 +5,6 @@ on:
     branches:
       - main
 
-
 permissions:
   contents: write  
 
@@ -22,19 +21,25 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Commit & Push
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Commit & Push themeMode changes (if any)
         run: |
-        
           git config --global user.name "codewithajoydas"
           git config --global user.email "codewithajoydas@gmail.com"
           git add .
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "✅ No changes to commit"
           else
             git commit -m "♻️ Toggle theme mode"
             git push
           fi
-      - name: vercel
-        run: |
-           npm i -g vercel
-           vercel
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token=$VERCEL_TOKEN --yes
