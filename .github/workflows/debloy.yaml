@@ -34,7 +34,7 @@ jobs:
           else
             git commit -m "♻️ Toggle theme mode"
             git push
-
+          fi
       - name: Install Vercel CLI
         run: npm install -g vercel
 
