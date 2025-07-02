@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+::selection{
+  background:  rgba(216, 166, 72, 0.836);
+  color: white;
+}
+::-webkit-scrollbar{
+  width: 2px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: #ffffff;
+  width: 2px;
+}

@@ -1,0 +1,173 @@
+:root {
+  --main-color: rgba(216, 166, 72, 0.836);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+.p-container h1 {
+  font-size: clamp(60px, 20vw, 100px);
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding-top: 40px;
+  color: var(--main-color);
+}
+.p-container {
+  display: block;
+  color: white;
+  background: url("../assets/ethan.jpg");
+  background-position: center;
+  backdrop-filter: blur(5px);
+  background-size: contain;
+  height: 100vh;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+.ht {
+  width: 100%;
+  animation: anima .5s ease-in-out;
+  text-align: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+.ht p {
+  padding: 0 70px;
+  letter-spacing: 4px;
+}
+.project-card {
+  background: #00000007;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  border: 1px solid gray;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  filter: brightness(0.6);
+}
+.project-card span {
+  color: gray;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.p-container::-webkit-scrollbar {
+  display: block;
+}
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+}
+a button {
+  border: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #5e51eb;
+  color: white;
+  cursor: pointer;
+}
+.projects-list .project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.projects-list .project-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.projects-list .project-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.projects-list .project-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.projects-list .project-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.projects-list .project-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.projects-list .project-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.projects-list .project-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.projects-list .project-card:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.projects-list .project-card:nth-child(10) {
+  animation-delay: 0.1s;
+}
+.projects-list .project-card:nth-child(11) {
+  animation-delay: 0.11s;
+}
+.projects-list .project-card:nth-child(12) {
+  animation-delay: 0.12s;
+}
+.projects-list .project-card:nth-child(13) {
+  animation-delay: 0.13s;
+}
+.projects-list .project-card:nth-child(14) {
+  animation-delay: 0.14s;
+}
+.projects-list .project-card:nth-child(15) {
+  animation-delay: 0.15s;
+}
+.projects-list .project-card:nth-child(16) {
+  animation-delay: 0.16s;
+}
+.projects-list .project-card:nth-child(17) {
+  animation-delay: 0.17s;
+}
+.projects-list .project-card:nth-child(18) {
+  animation-delay: 0.18s;
+}
+.projects-list .project-card:nth-child(19) {
+  animation-delay: 0.19s;
+}
+.projects-list .project-card:nth-child(20) {
+  animation-delay: 0.2s;
+}
+.projects-list .project-card:nth-child(21) {
+  animation-delay: 0.21s;
+}
+
+.projects-list .project-card {
+  animation: anima .7s ease-out forwards;
+  opacity: 0;
+}
+@keyframes anima {
+  0% {
+    transform: scale(.1)  ;
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.9);
+}
+/* 75%{
+    transform: scale(1.2);
+    
+  } */
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes h1tag {
+    0% {
+      /* transform: translate(0%, -50%) scale(.1); */
+      width: 0;
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+    100% {
+      transform: translate(0%, 0) skew(0deg);
+      width: 100%;
+    }
+  }
